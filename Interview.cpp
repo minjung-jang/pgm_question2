@@ -41,6 +41,9 @@ vector<int>* Interview::getInterview() const {
 	return m_interview;
 }
 
+/*----------------------------------------------------
+	인터뷰 파일을 vector에 저장
+------------------------------------------------------*/
 void Interview::setInterview(char* arg_file) {
 
 	if (!m_file.is_open()) {

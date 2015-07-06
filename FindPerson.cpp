@@ -14,6 +14,11 @@ FindPerson::~FindPerson() {
 	delete[] m_resident;
 }
 
+/*---------------------------------------------------------------
+	알고리즘 1.
+	- 전체 주민수와 각 주민이 인터뷰 시 지목한 사람의 숫자가
+	큰 차이가 없는 경우 효율적
+-----------------------------------------------------------------*/
 void FindPerson::search() {
 
 	for (int i = 0; i < m_totNum; i++) {
@@ -36,6 +41,11 @@ void FindPerson::search() {
 	}	
 }
 
+/*---------------------------------------------------------------
+	알고리즘 2.
+	- 전체 주민수와 각 주민이 인터뷰 시 지목한 사람의 숫자가
+	큰 차이가 있는 경우 효율적 (p2-2의 경우 비교할 수 없을 정도로 빠름)
+-----------------------------------------------------------------*/
 void FindPerson::search2() {
 
 	do {
@@ -56,6 +66,9 @@ void FindPerson::search2() {
 	} while (isAllChecked(m_totNum) == false);
 }
 
+/*---------------------------------------------------------------
+	해당 주민이 사람이라고 표시하는 함수.
+-----------------------------------------------------------------*/
 void FindPerson::checkPerson(int person) {
 	vector<int>::iterator iter;
 
@@ -64,6 +77,9 @@ void FindPerson::checkPerson(int person) {
 	}	
 }
 
+/*---------------------------------------------------------------
+	모든 사람인 주민의 인터뷰 확인 여부 반환
+-----------------------------------------------------------------*/
 bool FindPerson::isAllChecked(int length) {
 
 	for (int i = 0; i < length; i++) {
@@ -100,6 +116,6 @@ void FindPerson::printPersonList() const {
 	}
 }
 
-int FindPerson::getTOtNum() const {
+int FindPerson::getTotNum() const {
 	return m_totNum;
 }

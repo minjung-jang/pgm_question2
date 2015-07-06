@@ -19,7 +19,7 @@ void main(int argc, char* argv[])
 
 	FindPerson findPerson(interview);	
 
-	cout << "ÃÑ " << findPerson.getTOtNum() << "¸íÀÇ ÁÖ¹Î" << endl;
+	cout << "ÃÑ " << findPerson.getTotNum() << "¸íÀÇ ÁÖ¹Î" << endl;
 	findPerson.search2();
 	findPerson.printPersonList();
 

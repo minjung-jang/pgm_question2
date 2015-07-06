@@ -19,7 +19,7 @@ public :
 	void search();
 	void search2();
 	void printPersonList() const;
-	int getTOtNum() const;
+	int getTotNum() const;
 	
 private :
 	void checkPerson(int person);

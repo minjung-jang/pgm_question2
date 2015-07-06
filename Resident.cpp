@@ -24,6 +24,11 @@ void Resident::setIsInterviewed(bool isInterviewed) {
 	m_isInterviewed = isInterviewed;
 }
 
+/*--------------------------------------------------------
+	멤버변수에 편리하게 접근하기 위한 연산자 오버로딩
+	0 - m_isPerson (사람인지 아닌지)
+	1 - m_isInterviewed (인터뷰 확인 완료 여부)
+----------------------------------------------------------*/
 bool Resident::operator [](int index) const {
 	if (index == 0) {
 		return m_isPerson;
